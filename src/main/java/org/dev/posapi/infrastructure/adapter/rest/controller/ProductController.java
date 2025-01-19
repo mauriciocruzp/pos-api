@@ -1,4 +1,4 @@
-package org.dev.posapi.infrastructure.controller;
+package org.dev.posapi.infrastructure.adapter.rest.controller;
 
 import org.dev.posapi.application.dto.request.CreateProductRequest;
 import org.dev.posapi.application.port.in.ProductUseCase;
