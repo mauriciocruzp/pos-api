@@ -1,9 +1,13 @@
 package org.dev.posapi.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "sale_item")
+@Getter
+@Setter
 public class SaleItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

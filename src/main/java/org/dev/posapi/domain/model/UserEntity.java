@@ -2,9 +2,13 @@ package org.dev.posapi.domain.model;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
+@Getter
+@Setter
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +28,6 @@ public class UserEntity {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public enum Role {
-        ADMIN, CASHIER
+        admin,cashier
     }
 }
