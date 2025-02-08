@@ -10,7 +10,7 @@ public class UpdateProductRequest {
     private Double price;
     private Integer stock;
     private Status status;
-    private enum Status {
+    public enum Status {
         active, inactive
     }
 }
