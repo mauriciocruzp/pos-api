@@ -77,6 +77,12 @@ public class ProductService implements ProductUseCase {
         product.setName(request.getName());
         product.setPrice(request.getPrice());
         product.setStock(request.getStock());
+        UpdateProductRequest.Status status = request.getStatus();
+        if (status == UpdateProductRequest.Status.active) {
+            product.setStatus(ProductEntity.Status.active);
+        } else {
+            product.setStatus(ProductEntity.Status.inactive);
+        }
 
         ProductEntity updatedProduct = productRepository.update(id, product);
 
