@@ -41,7 +41,7 @@ public class ProductRepositoryImpl implements ProductRepository {
         product.setStock(productEntity.getStock());
         product.setStatus(productEntity.getStatus());
 
-        return iProductRepository.save(productEntity);
+        return iProductRepository.save(product);
     }
 
     @Override
