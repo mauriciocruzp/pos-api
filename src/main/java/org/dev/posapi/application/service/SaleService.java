@@ -1,6 +1,5 @@
 package org.dev.posapi.application.service;
 
-import org.dev.posapi.application.dto.request.CreateSaleItemRequest;
 import org.dev.posapi.application.dto.request.CreateSaleRequest;
 import org.dev.posapi.application.dto.request.UpdateSaleRequest;
 import org.dev.posapi.application.port.in.ProductUseCase;
@@ -21,7 +20,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
 
 @Component
 public class SaleService implements SaleUseCase {
@@ -85,11 +83,8 @@ public class SaleService implements SaleUseCase {
                 saleItems.add(saleItem);
             }
         }
-
         sale.setTotal(total);
         saleRepository.save(sale);
-
-
 
         return BaseResponse.builder()
                 .status(HttpStatus.CREATED)
